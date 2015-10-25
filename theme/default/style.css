@@ -1,0 +1,242 @@
+/**
+ * Vmc Dialog v1.0.0 弹层插件
+ * 维米客网页工作室
+ * http://www.vomoc.com/vmc/dialog/
+ * vomoc@qq.com
+ * 2015/07/05
+ **/
+.html-overflow {
+	overflow-y:hidden;
+	overflow-x:hidden;	
+}
+body .vui-hide {
+	display: none;
+}
+body .vui-hidden {
+	visibility:hidden;
+}
+/************************************/
+.vui-iframe {
+	height:100%;
+	width:100%;
+}
+/************************************/
+.vuidg-default {
+	display:block;
+	position:fixed;
+	top:0;
+	left:0;
+	width:0;
+	height:0;
+	margin:0;
+	padding:0;
+	border:none;
+}
+/************************************/
+.vuidg-default .vuidg-overlay {
+	position:relative;
+	display:block;
+	z-index:10;
+	position:absolute;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	border:none;
+}
+.vuidg-default .vuidg-overlay-bg {
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity:0;
+	opacity:0;
+}
+.vuidg-default .vuidg-overlay-inner {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	border:none;
+}
+.vuidg-default .vuidg-wrap {
+	display:block;
+	z-index:20;
+	position:absolute;
+	margin:0;
+	padding:0;
+	border:none;
+}
+/************************************/
+.vuidg-default .vuidg-wrap-bg {
+	display:block;
+	z-index:30;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity:0;
+	opacity:0;
+}
+.vuidg-default .vuidg-shade {
+	display:block;
+	z-index:40;
+	position:absolute;
+	margin:0;
+	padding:0;
+	border:none;
+}
+.vuidg-default .vuidg-inner {
+	display:block;
+	z-index:50;
+	position:absolute;
+	margin:0;
+	padding:0;
+	border-style:solid;
+}
+.vuidg-default .vuidg-move {
+	display:block;
+	z-index:60;
+	position:absolute;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	border-style:solid;
+	border-color:#000;
+	background:#FFF;
+	cursor:move;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity:0.5;
+	opacity:0.5;
+}
+/************************************/
+.vuidg-default .vuidg-title {
+	display:block;
+	overflow:hidden;
+	position:relative;
+	height:29px;
+	margin:0;
+	padding:0;
+	border-bottom:1px solid #CCC;
+	background:#F0F0F0;
+}
+.vuidg-default .vuidg-title-text {
+	display:block;
+	overflow:hidden;
+	height:21px;
+	margin:0;
+	padding:5px 8px;
+	border:none;
+	line-height:19px;
+	font-family:"Microsoft YaHei",verdana,"\5B8B\4F53";
+	font-size:14px;
+	font-weight:400;
+	color:#333;
+}
+.vuidg-default .vuidg-title-close {
+	display:block;
+	overflow:hidden;
+	position:absolute;
+	top:5px;
+	right:5px;
+	width:19px;
+	height:19px;
+	background:#F0F0F0 url(close.gif) center center no-repeat;
+	cursor:pointer;
+}
+.vuidg-default .vuidg-title-close-hover {
+	background-color:#999;
+	background-image:url(close-hover.gif);
+}
+/************************************/
+.vuidg-default .vuidg-content {
+	display:block;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	border:none;
+}
+.vuidg-default .vuidg-content-text {
+	display:block;
+	padding:5px 8px;
+	line-height:20px;
+	font-family:"Microsoft YaHei",verdana,"\5B8B\4F53";
+	font-size:12px;
+	font-weight:400;
+	color:#333;
+	white-space:nowrap;
+}
+.vuidg-default .vuidg-content a,
+.vuidg-default .vuidg-content a:hover {
+	margin:0;
+	padding:0;
+	border:none;
+	color:#333;
+	text-decoration:none;
+}
+.vuidg-default .vuidg-content p {
+	display:block;
+	margin:0;
+	padding:0;
+	border:none;
+}
+/************************************/
+.vuidg-default .vuidg-button-wrap {
+	display:block;
+	overflow:hidden;
+	height:26px;
+	margin:0;
+	padding:5px;
+	border-top:1px solid #CCC;
+	background:#F0F0F0;
+}
+.vuidg-default .vuidg-button {
+	float:left;
+	display:inline;
+	height:24px;
+	margin-right:5px;
+	padding:0 10px;
+	border:1px solid #CCC;
+	background:#F0F0F0;
+	line-height:24px;
+	font-family:"Microsoft YaHei",verdana,"\5B8B\4F53";
+	font-size:12px;
+	font-weight:400;
+	color:#333;
+	cursor:pointer;
+}
+.vuidg-default .vuidg-button-hover {
+	border-color:#959595;
+	background-color:#F7F7F7;
+	color:#000;
+}
+/************************************/
+.vuidg-default .vuidg-loading {
+	float:left;
+	display:inline;
+	width:80px;
+	height:30px;
+	margin:0;
+	padding-left:40px;
+	background:url(loading.gif) no-repeat left center;
+	line-height:30px;
+	font-family:'微软雅黑';
+	font-size:12px;
+	font-weight:400;
+	color:#333;
+}
